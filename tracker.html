@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <style type="text/css">
+        body {
+            background-color:blue;
+        }
+        #startTime {
+            background-color:red;
+            border-style:solid;
+            border-width:10px;
+            border-color:black;
+        }
+        #endTime {
+            background-color:brown;
+             border-style:solid;
+            border-width:10px;
+            border-color:black;
+        }
+        #activ {
+            background-color:green;
+            border-style:solid;
+            border-width:10px;
+            border-color:black;
+        }
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://rawgit.com/jonthornton/jquery-timepicker/master/jquery.timepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/jonthornton/jquery-timepicker/master/jquery.timepicker.css">
+    <script src="tracker.js"></script>
+    <script id="activity-template" type="text/x-handlebars-template">
+        <div id="activ" class="activity"> 
+        <h3>{{activity}}</h3> </div>
+        <div id="startTime"> <h3>Start time {{start}}</h3> </div>
+        <div id="endTime"> <h3>End time {{end}}</h3> </div>
+    </script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Track your time.</legend>
+            <div>
+            <input type="text" placeholder="start Time" name="start">
+            </div>
+            <div>
+            <input type="text" placeholder="End time" name="end">
+            </div>
+            <div>
+            <input type="text" placeholder="Activity Name" name="activity">
+            </div>
+            <div>
+                <input type="submit" value="submit">
+            </div>
+        </fieldset>
+    </form>
+    <div id="activities">
+        
+    </div>
+</body>
+</html>

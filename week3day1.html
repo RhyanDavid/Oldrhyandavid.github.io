@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head><body>
+  <div id="everything">
+      <h1>A heading!</h1>
+      <p>Here's some text!</p>
+      <p>Here's a second set of text!</p>
+      <div class="holder">
+          <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+          </ul>
+      </div>
+      <div class="holder">
+          <ul>
+              <li id="changeMe">List Item 4</li>
+              <li>List Item 5</li>
+              <li>List Item 6</li>
+          </ul>
+      </div>
+      <div id="secret">We should hide this!</div>
+      <li> this ought not to be bold.</li>
+  </div>
+  <div id="result">
+    
+  </div>
+  <script>
+  function funnySentance(noun,adjective,verb,adverb){
+    $("#result").html(noun+adjective+verb+adverb);
+  }
+  
+  
+  function stringPrinter(message){
+    $("#result").text(message);
+  }
+  
+  
+  $("h1").css({color:"blue"});
+  $("body").css({"background-color":"red"});
+  $("#everything").css({"font-size":"1000%"});
+  $(".holder").css({"border":"10px solid black"});
+  $("ul li").css({"font-weight":"bold"});
+  $("h1+p").css({"color":"green"});
+  $("#secret").css({"display":"none"});
+  $("#changeMe").html("Something else that is not list item 4.");
+  $("#changeMe").append(" Or is it list item 4?");
+  $("li").html("this is a new sentance");
+  $("li").append("New add on");
+  $("#secret").css({"display":"block"});
+  $("#secret").html("This is difrent");
+  $("#everything").append("<p>This is a new paragraph element</p>");
+  
+
+  </script>
+</body>
+</html>

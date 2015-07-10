@@ -7,7 +7,6 @@
     <body>
         <h3>click to shoot first after it says draw to win! I you shoot to early you will lose.</h3>
             
-            
             <script>
      var gameState;
             var countdownSeconds = 3;
@@ -23,8 +22,7 @@
         
             function doCreate(){
                 game.standoff = game.add.sprite(0,0);
-                game.message = game.add.text(400,400);
-               
+                game.message = game.add.text(400,400)
                 
                 game.input.onDown.add(function(){
                     if(gameState === "start"){
@@ -96,7 +94,7 @@
                 game.message.text = "You Lose!";
                 game.sound.play("splat");
                 game.standoff.loadTexture("lose");
-                 
+                
             }
             
             function doTryAgain(){
@@ -105,7 +103,6 @@
             }
             
     
-        
             var game = new Phaser.Game(640, 480, Phaser.AUTO, "", {
                 preload: doPreload,
                 create: doCreate
